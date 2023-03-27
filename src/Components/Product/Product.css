@@ -1,0 +1,31 @@
+.img-cut{
+    width: 286px;
+    height: 286px;
+    border-radius: 15px;
+    margin: 7px;
+}
+.product{
+    width: 300px;
+    height: 560px;
+    border: 1px solid rgb(238, 232, 232);
+    position: relative;
+    border-radius: 8px;
+}
+.btn-add-cart{
+    background-color: #FFE0B3;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    border: 1px solid #95A0A7;
+    border-radius: 0px 0px 8px 8px
+}
+.product-info{
+    margin: 0px 7px;
+}
+.product-info p{
+    margin: 0 2.5px;
+}
+.btn-add-cart:hover{
+    background-color: rgb(119, 60, 119);
+    color: white    ;
+}
