@@ -16,7 +16,7 @@ const Cart = (props) => {
     parseInt(totalValue.innerText)
     parseInt(shippingTotalValue.innerText)
     let totalPrice = totalValue+shippingTotalValue+totalTax;
-    console.log(totalPrice)
+    // console.log(totalPrice)
     return (
         <>
             <h3 className='order-name'>Order Summary</h3>
