@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import Product from '../Product/Product';
 import './Shop.css'
-
-
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faCoffee,faCheckCircle,faHouse } from '@fortawesome/free-solid-svg-icons'
 const Shop = () => {
     const [products,setProducts] = useState([])
     const [carts,setCart] = useState([])
