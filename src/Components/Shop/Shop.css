@@ -10,3 +10,12 @@
     margin: 50px;
     
 }
+
+.cart-container{
+    background: rgba(255, 153, 0, 0.3);
+    height: 944px;
+    padding: 20px;
+    padding-top: 30px;
+    position: sticky;
+    top: 0;
+}
