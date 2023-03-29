@@ -2,7 +2,7 @@ import React from 'react';
 import './Cart.css'
 const Cart = (props) => {
     const carts = props.carts;
-    // console.log(carts)
+    console.log('noman',carts)
     let totalValue = 0;
     for(let i=0; i<carts.length; i++){
         totalValue = totalValue + carts[i].price;
@@ -24,6 +24,9 @@ const Cart = (props) => {
             <h4>Total Price : ${totalValue}</h4>
             <h4>Total Shipping Charge: ${shippingTotalValue}</h4>
             <h4>Tax: ${totalTax.toFixed(2)}</h4>
+            {/* {
+                carts.map(cart=>(<h4>Quantity:{cart.quantity+1}</h4>))
+            } */}
             <h3>Grand Total : ${totalPrice}</h3>
         </>
     );
