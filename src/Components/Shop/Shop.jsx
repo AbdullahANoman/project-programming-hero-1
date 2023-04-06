@@ -25,18 +25,33 @@ const Shop = () => {
                 // console.log(addedProduct)
                 const quantity = storedCart[id];
                 addedProduct.quantity = quantity;
-                console.log(addedProduct)
                 savedProduct.push(addedProduct)
             }
         }
         setCart(savedProduct)
 
     },[products])
-    const handleAddToCart = (props) =>{
-        const newCart = [...carts,props];
-        setCart(newCart)
-        addToDb(props.id)
-    } 
+    
+    const handleAddToCart = (product) => {
+        // cart.push(product); '
+        let newCart = [];
+        // const newCart = [...cart, product];
+        // if product doesn't exist in the cart, then set quantity = 1
+        // if exist update quantity by 1
+        const exists = carts.find(pd => pd.id === product.id);
+        if(!exists){
+            product.quantity = 1;
+            newCart= [...carts, product]
+        }
+        else{
+            exists.quantity = exists.quantity + 1;
+            const remaining = carts.filter(pd => pd.id !== product.id);
+            newCart = [...remaining, exists];
+        }
+
+        setCart(newCart);
+        addToDb(product.id)
+    }
     return (
         <div className='shop-container'>
             <div className='products-container'>

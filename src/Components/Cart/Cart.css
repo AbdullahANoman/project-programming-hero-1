@@ -2,3 +2,6 @@
     text-align: center;
     font-size: 25px;
 }
+.cart p {
+    font-weight: bold;
+}
