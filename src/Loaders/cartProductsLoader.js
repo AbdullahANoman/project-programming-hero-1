@@ -5,7 +5,6 @@ const cartProductsLoader =  async() =>{
     const products = await loadedProducts.json();
 
     const storedCart = getShoppingCart();
-    console.log(storedCart)
         // step-1 get id 
         const savedProduct = [];
         for(const id in storedCart){

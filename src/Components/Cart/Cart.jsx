@@ -1,12 +1,13 @@
-import React from "react";
+import React, { Children } from "react";
 import "./Cart.css";
-
-const Cart = ({ carts }) => {
+import { Link } from "react-router-dom";
+import { TrashIcon } from '@heroicons/react/24/solid'
+const Cart = ({ carts,removeCart,children }) => {
   // const cart = props.cart; // option 1
   // const {cart} = props; // option 2
 
   // console.log(cart);
-
+  console.log(children)
   let totalPrice = 0;
   let totalShipping = 0;
   let quantity = 0;
@@ -33,6 +34,9 @@ const Cart = ({ carts }) => {
         <p>Shipping: ${totalShipping}</p>
         <p>Tax: ${tax.toFixed(2)}</p>
         <h6>Grand Total: ${grandTotal.toFixed(2)} </h6>
+
+        <button onClick={removeCart} className="clear-cart-btn"><span>Clear Cart </span> <TrashIcon className="icon1" />   </button>
+        {children}
       </div>
     </>
   );
