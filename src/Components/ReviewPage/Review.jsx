@@ -3,7 +3,7 @@ import './Review.css'
 import { TrashIcon } from '@heroicons/react/24/solid'
 
 const Review = ({product,handleDelete}) => {
-    const {id,img,name,price,quantity,shipping} = product;
+    const {_id,img,name,price,quantity,shipping} = product;
     return (
         <div className='review'>
             <div className='review-item'>
@@ -18,7 +18,7 @@ const Review = ({product,handleDelete}) => {
                 </div>
             </div>
             <div>
-                <button onClick={()=>handleDelete(id)} className='delete-btn'><TrashIcon className="icon" /></button>
+                <button onClick={()=>handleDelete(_id)} className='delete-btn'><TrashIcon className="icon" /></button>
             </div>
         </div>
     );
